@@ -1,4 +1,4 @@
-// ignore_for_file: camel_case_types
+// ignore_for_file: camel_case_types, duplicate_ignore
 
 import 'package:dine/screens/home_screen.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';

@@ -1,10 +1,7 @@
 import 'package:dine/screens/ticket_view.dart';
 import 'package:dine/utils/app_styles.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:gap/gap.dart';
 
 // ignore: camel_case_types

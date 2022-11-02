@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:dine/utils/emotion_face.dart';
+import 'package:dine/utils/exercise_tiles.dart';
 import 'package:flutter/material.dart';
 
 class Homepage extends StatefulWidget {
@@ -34,6 +35,7 @@ class _HomepageState extends State<Homepage> {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
+                          // ignore: prefer_const_constructors
                           Text(
                             "Hii Collins ",
                             style: TextStyle(
@@ -191,62 +193,58 @@ class _HomepageState extends State<Homepage> {
             ),
             Expanded(
               child: Container(
+
                 padding: EdgeInsets.all(12),
-                color: Colors.grey[300],
+                color: Colors.green[300],
                 child: Center(
                   child: Column(
                     children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            "Exercises",
-                            style: TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold,
-                                color: Color.fromARGB(255, 15, 2, 2)),
-                          ),
-                          Icon(Icons.more_horiz)
-                        ],
+                      Container(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              "Exercises",
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                  color: Color.fromARGB(255, 15, 2, 2)),
+                            ),
+                            Icon(Icons.more_horiz)
+                          ],
+                        ),
                       ),
                       SizedBox(height: 20),
 
                       // list view exercises
-                      Container(
-                        padding: EdgeInsets.all(12),
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(16)),
-                        child: Row( 
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      Expanded(
+                        child: ListView(
                           children: [
-                            Row(children: [
-                              Icon(Icons.favorite),
-                            SizedBox(width: 10),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                //title
-                                Text(
-                                  "Speaking Skills",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 16),
-                                ),
-                                //subtitles
-  
-                                Text(
-                                  "15 Exercises",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 12,
-                                      color: Colors.grey[700]
-                                      ),
-                                )
-                              ],
+                            Exercise(
+
+                              icon: Icons.favorite,
+                              skillName: "Speaking Skills",
+                              numberOfExercises: '15',
+                              color: Colors.green,
                             ),
-                            ],),
-                            Icon(Icons.more_horiz)
+                            Exercise(
+                              color: Colors.greenAccent,
+                              icon: Icons.health_and_safety,
+                              skillName: "Safety Skills",
+                              numberOfExercises: '10',
+                            ),
+                            Exercise(
+                              color: Colors.blue,
+                              icon: Icons.run_circle,
+                              skillName: "100 Meters",
+                              numberOfExercises: '5',
+                            ),
+                            Exercise(
+                              color: Colors.brown,
+                              icon: Icons.person,
+                              skillName: " Push ups",
+                              numberOfExercises: '30',
+                            ),
                           ],
                         ),
                       )

@@ -17,7 +17,7 @@ class EmoticonFace extends StatelessWidget {
       child: Center(
         child: Text(
           emoticoFace,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 28,
           ),
         ),
